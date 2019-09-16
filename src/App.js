@@ -14,7 +14,6 @@ class App extends Component {
   };
   render() {
     const { books, search } = this.state;
-    console.log(search);
     return (
       <div className="App">
         <Heading topic={search} />
@@ -39,7 +38,6 @@ class App extends Component {
     return json;
   };
   updateSearch = updateSearchString => {
-    //set state with new search
     this.setState({ search: updateSearchString });
   };
   componentDidUpdate = async (prevProps, prevState) => {
