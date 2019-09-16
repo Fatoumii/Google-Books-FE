@@ -1,33 +1,99 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 2fr 5fr;
+  grid-template-areas:
+    "heading heading"
+    "search books"
+    "chart books";
+  color: rgb(70, 67, 67);
+  font-family: "Quicksand", sans-serif;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+  grid-area: heading;
+  background-color: whitesmoke;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topic {
+  color: maroon;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.search {
+  grid-area: search;
+  margin: auto 0;
+  margin-left: 10px;
+}
+
+.search input {
+  border: 1px solid grey;
+  padding: 7px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 2.5px;
+}
+.button {
+  padding: 7px;
+  width: 10%;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 5px 0.5px rgb(192, 189, 189);
+  cursor: pointer;
+}
+
+.chart {
+  grid-area: chart;
+  margin: auto 0;
+  margin-left: 10px;
+}
+
+.books {
+  grid-area: books;
+  margin-right: 10px;
+  overflow-y: scroll;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(209, 221, 209);
+  box-shadow: 0px 0px 7px 1px rgb(224, 233, 233);
 }
 
-.App-link {
-  color: #61dafb;
+ul.books {
+  list-style: none;
+}
+.book {
+  width: 28%;
+  /* border: 1px solid grey; */
+  background-color: whitesmoke;
+  margin: 25px 10px;
+  padding: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book:hover {
+  transform: scale(1.03);
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 7px 1px rgb(141, 138, 138);
 }
+
+/* 
+viewport- vh/vw 
+g-t-a: where each component is located
+
+.heading {
+  grid-row: 1/2
+  grid-column: 1/3
+} no need for areas
+*/
