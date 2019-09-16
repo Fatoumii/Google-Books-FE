@@ -49,3 +49,6 @@ class App extends Component {
 }
 
 export default App;
+
+//media queries
+//fix search engine, doesn't update
