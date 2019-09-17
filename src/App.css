@@ -115,10 +115,14 @@ ul.books {
     width: 20%;
     border-radius: 2px;
   }
-  .books {
+  ul.books {
     width: 100vw;
     font-size: 12px;
     justify-content: space-evenly;
+    margin: 10px;
+  }
+  .book {
+    width: 38%;
   }
   .book img {
     width: 90px;
