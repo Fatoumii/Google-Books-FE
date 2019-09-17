@@ -2,9 +2,6 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import faker from "faker";
 
-//labels: ['category', 'category', 'etc']
-//data: [2, 10] << amount of books in each category
-//tally: {category: 2, category: 10}
 const Chart = ({ books }) => {
   const tally = books.reduce((acc, book) => {
     book.volumeInfo.categories.forEach(category => {
@@ -16,7 +13,7 @@ const Chart = ({ books }) => {
   const labels = Object.keys(tally);
   const chartData = labels.map(label => {
     return tally[label];
-  }); // object aren't ordered so may bring back ones which aren't matched if object.values(tally)
+  });
 
   const data = {
     labels,

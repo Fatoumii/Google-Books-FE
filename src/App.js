@@ -4,13 +4,12 @@ import Heading from "./components/Heading.jsx";
 import Search from "./components/Search";
 import Chart from "./components/Chart";
 import Books from "./components/Books";
-// import axios from "axios";
-import json from "./jsonBooks";
+import axios from "axios";
 
 class App extends Component {
   state = {
     books: [],
-    search: "javascript"
+    search: "music"
   };
   render() {
     const { books, search } = this.state;
@@ -30,12 +29,11 @@ class App extends Component {
   };
 
   fetchBooks = async () => {
-    // const { search } = this.state;
-    // const { data } = await axios.get(
-    //   `https://www.googleapis.com/books/v1/volumes?q=${search}`
-    // );
-    // return data.items;
-    return json;
+    const { search } = this.state;
+    const { data } = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes?q=${search}`
+    );
+    return data.items;
   };
   updateSearch = updateSearchString => {
     this.setState({ search: updateSearchString });
@@ -51,4 +49,3 @@ class App extends Component {
 export default App;
 
 //media queries
-//fix search engine, doesn't update

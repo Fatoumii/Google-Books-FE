@@ -7,7 +7,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <p>Search a topic below:</p>
+        <p className="searchTopic">Search a topic below:</p>
         <form className="search" onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -16,9 +16,7 @@ class Search extends Component {
             onChange={this.handleChange}
           />
           <br />
-          <button className="button" type="submit">
-            Search
-          </button>
+          <button type="submit">Search</button>
         </form>
       </div>
     );
