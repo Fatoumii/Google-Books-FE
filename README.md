@@ -1,6 +1,6 @@
 # Google Books
 
-A single page frontend project using React and CSS, with data being requested from GoogleBooks API/JSON.
+A single page frontend responsive project using React and CSS, with data being requested from GoogleBooks API/JSON.
 
 ## Getting Started
 
